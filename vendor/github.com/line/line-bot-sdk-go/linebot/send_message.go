@@ -9,7 +9,7 @@ func (client *Client) SendText(to []string, text string) (result *ResponseConten
 	return client.sendSingleMessage(to, SingleMessageContent{
 		ContentType: ContentTypeText,
 		ToType:      RecipientTypeUser,
-		Text:        "OOO " + text,
+		Text:        text,
 	})
 }
 
