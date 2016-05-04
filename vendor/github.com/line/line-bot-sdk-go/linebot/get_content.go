@@ -30,7 +30,7 @@ func (client *Client) GetMessageContent(content *ReceivedContent) (mc *MessageCo
 	if err != nil {
 		return
 	}
-	return "http " + newMessageContentResponse(res), nil
+	return newMessageContentResponse(res), nil
 }
 
 // GetMessageContentPreview function
