@@ -53,7 +53,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		content := result.Content()
 		if content != nil && content.IsMessage && content.ContentType == linebot.ContentTypeText {
 			text, err := content.TextContent()
-			_, err = bot.SendText([]string{content.From}, "謝謝!\n"+text.Text+"\n這是諸葛魔斌科技創作室")
+			_, err = bot.SendText([]string{content.From}, "OK "+text.Text)
 			if err != nil {
 				log.Println(err)
 			}
